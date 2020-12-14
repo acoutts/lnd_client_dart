@@ -18,15 +18,3 @@ const GetInfoResponse$json = const {
   ],
 };
 
-const WatchtowerServiceBase$json = const {
-  '1': 'Watchtower',
-  '2': const [
-    const {'1': 'GetInfo', '2': '.watchtowerrpc.GetInfoRequest', '3': '.watchtowerrpc.GetInfoResponse'},
-  ],
-};
-
-const WatchtowerServiceBase$messageJson = const {
-  '.watchtowerrpc.GetInfoRequest': GetInfoRequest$json,
-  '.watchtowerrpc.GetInfoResponse': GetInfoResponse$json,
-};
-

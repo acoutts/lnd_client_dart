@@ -5,8 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-import 'rpc.pbjson.dart' as $0;
-
 const GenSeedRequest$json = const {
   '1': 'GenSeedRequest',
   '2': const [
@@ -71,31 +69,5 @@ const ChangePasswordResponse$json = const {
   '2': const [
     const {'1': 'admin_macaroon', '3': 1, '4': 1, '5': 12, '10': 'adminMacaroon'},
   ],
-};
-
-const WalletUnlockerServiceBase$json = const {
-  '1': 'WalletUnlocker',
-  '2': const [
-    const {'1': 'GenSeed', '2': '.lnrpc.GenSeedRequest', '3': '.lnrpc.GenSeedResponse'},
-    const {'1': 'InitWallet', '2': '.lnrpc.InitWalletRequest', '3': '.lnrpc.InitWalletResponse'},
-    const {'1': 'UnlockWallet', '2': '.lnrpc.UnlockWalletRequest', '3': '.lnrpc.UnlockWalletResponse'},
-    const {'1': 'ChangePassword', '2': '.lnrpc.ChangePasswordRequest', '3': '.lnrpc.ChangePasswordResponse'},
-  ],
-};
-
-const WalletUnlockerServiceBase$messageJson = const {
-  '.lnrpc.GenSeedRequest': GenSeedRequest$json,
-  '.lnrpc.GenSeedResponse': GenSeedResponse$json,
-  '.lnrpc.InitWalletRequest': InitWalletRequest$json,
-  '.lnrpc.ChanBackupSnapshot': $0.ChanBackupSnapshot$json,
-  '.lnrpc.ChannelBackups': $0.ChannelBackups$json,
-  '.lnrpc.ChannelBackup': $0.ChannelBackup$json,
-  '.lnrpc.ChannelPoint': $0.ChannelPoint$json,
-  '.lnrpc.MultiChanBackup': $0.MultiChanBackup$json,
-  '.lnrpc.InitWalletResponse': InitWalletResponse$json,
-  '.lnrpc.UnlockWalletRequest': UnlockWalletRequest$json,
-  '.lnrpc.UnlockWalletResponse': UnlockWalletResponse$json,
-  '.lnrpc.ChangePasswordRequest': ChangePasswordRequest$json,
-  '.lnrpc.ChangePasswordResponse': ChangePasswordResponse$json,
 };
 

@@ -87,24 +87,3 @@ const BlockEpoch$json = const {
   ],
 };
 
-const ChainNotifierServiceBase$json = const {
-  '1': 'ChainNotifier',
-  '2': const [
-    const {'1': 'RegisterConfirmationsNtfn', '2': '.chainrpc.ConfRequest', '3': '.chainrpc.ConfEvent', '6': true},
-    const {'1': 'RegisterSpendNtfn', '2': '.chainrpc.SpendRequest', '3': '.chainrpc.SpendEvent', '6': true},
-    const {'1': 'RegisterBlockEpochNtfn', '2': '.chainrpc.BlockEpoch', '3': '.chainrpc.BlockEpoch', '6': true},
-  ],
-};
-
-const ChainNotifierServiceBase$messageJson = const {
-  '.chainrpc.ConfRequest': ConfRequest$json,
-  '.chainrpc.ConfEvent': ConfEvent$json,
-  '.chainrpc.ConfDetails': ConfDetails$json,
-  '.chainrpc.Reorg': Reorg$json,
-  '.chainrpc.SpendRequest': SpendRequest$json,
-  '.chainrpc.Outpoint': Outpoint$json,
-  '.chainrpc.SpendEvent': SpendEvent$json,
-  '.chainrpc.SpendDetails': SpendDetails$json,
-  '.chainrpc.BlockEpoch': BlockEpoch$json,
-};
-

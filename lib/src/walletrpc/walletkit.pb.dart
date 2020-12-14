@@ -5,7 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
@@ -1514,71 +1513,5 @@ class FinalizePsbtResponse extends $pb.GeneratedMessage {
   $core.bool hasRawFinalTx() => $_has(1);
   @$pb.TagNumber(2)
   void clearRawFinalTx() => clearField(2);
-}
-
-class WalletKitApi {
-  $pb.RpcClient _client;
-  WalletKitApi(this._client);
-
-  $async.Future<ListUnspentResponse> listUnspent($pb.ClientContext ctx, ListUnspentRequest request) {
-    var emptyResponse = ListUnspentResponse();
-    return _client.invoke<ListUnspentResponse>(ctx, 'WalletKit', 'ListUnspent', request, emptyResponse);
-  }
-  $async.Future<LeaseOutputResponse> leaseOutput($pb.ClientContext ctx, LeaseOutputRequest request) {
-    var emptyResponse = LeaseOutputResponse();
-    return _client.invoke<LeaseOutputResponse>(ctx, 'WalletKit', 'LeaseOutput', request, emptyResponse);
-  }
-  $async.Future<ReleaseOutputResponse> releaseOutput($pb.ClientContext ctx, ReleaseOutputRequest request) {
-    var emptyResponse = ReleaseOutputResponse();
-    return _client.invoke<ReleaseOutputResponse>(ctx, 'WalletKit', 'ReleaseOutput', request, emptyResponse);
-  }
-  $async.Future<$1.KeyDescriptor> deriveNextKey($pb.ClientContext ctx, KeyReq request) {
-    var emptyResponse = $1.KeyDescriptor();
-    return _client.invoke<$1.KeyDescriptor>(ctx, 'WalletKit', 'DeriveNextKey', request, emptyResponse);
-  }
-  $async.Future<$1.KeyDescriptor> deriveKey($pb.ClientContext ctx, $1.KeyLocator request) {
-    var emptyResponse = $1.KeyDescriptor();
-    return _client.invoke<$1.KeyDescriptor>(ctx, 'WalletKit', 'DeriveKey', request, emptyResponse);
-  }
-  $async.Future<AddrResponse> nextAddr($pb.ClientContext ctx, AddrRequest request) {
-    var emptyResponse = AddrResponse();
-    return _client.invoke<AddrResponse>(ctx, 'WalletKit', 'NextAddr', request, emptyResponse);
-  }
-  $async.Future<PublishResponse> publishTransaction($pb.ClientContext ctx, Transaction request) {
-    var emptyResponse = PublishResponse();
-    return _client.invoke<PublishResponse>(ctx, 'WalletKit', 'PublishTransaction', request, emptyResponse);
-  }
-  $async.Future<SendOutputsResponse> sendOutputs($pb.ClientContext ctx, SendOutputsRequest request) {
-    var emptyResponse = SendOutputsResponse();
-    return _client.invoke<SendOutputsResponse>(ctx, 'WalletKit', 'SendOutputs', request, emptyResponse);
-  }
-  $async.Future<EstimateFeeResponse> estimateFee($pb.ClientContext ctx, EstimateFeeRequest request) {
-    var emptyResponse = EstimateFeeResponse();
-    return _client.invoke<EstimateFeeResponse>(ctx, 'WalletKit', 'EstimateFee', request, emptyResponse);
-  }
-  $async.Future<PendingSweepsResponse> pendingSweeps($pb.ClientContext ctx, PendingSweepsRequest request) {
-    var emptyResponse = PendingSweepsResponse();
-    return _client.invoke<PendingSweepsResponse>(ctx, 'WalletKit', 'PendingSweeps', request, emptyResponse);
-  }
-  $async.Future<BumpFeeResponse> bumpFee($pb.ClientContext ctx, BumpFeeRequest request) {
-    var emptyResponse = BumpFeeResponse();
-    return _client.invoke<BumpFeeResponse>(ctx, 'WalletKit', 'BumpFee', request, emptyResponse);
-  }
-  $async.Future<ListSweepsResponse> listSweeps($pb.ClientContext ctx, ListSweepsRequest request) {
-    var emptyResponse = ListSweepsResponse();
-    return _client.invoke<ListSweepsResponse>(ctx, 'WalletKit', 'ListSweeps', request, emptyResponse);
-  }
-  $async.Future<LabelTransactionResponse> labelTransaction($pb.ClientContext ctx, LabelTransactionRequest request) {
-    var emptyResponse = LabelTransactionResponse();
-    return _client.invoke<LabelTransactionResponse>(ctx, 'WalletKit', 'LabelTransaction', request, emptyResponse);
-  }
-  $async.Future<FundPsbtResponse> fundPsbt($pb.ClientContext ctx, FundPsbtRequest request) {
-    var emptyResponse = FundPsbtResponse();
-    return _client.invoke<FundPsbtResponse>(ctx, 'WalletKit', 'FundPsbt', request, emptyResponse);
-  }
-  $async.Future<FinalizePsbtResponse> finalizePsbt($pb.ClientContext ctx, FinalizePsbtRequest request) {
-    var emptyResponse = FinalizePsbtResponse();
-    return _client.invoke<FinalizePsbtResponse>(ctx, 'WalletKit', 'FinalizePsbt', request, emptyResponse);
-  }
 }
 

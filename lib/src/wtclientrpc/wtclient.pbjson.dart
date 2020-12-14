@@ -110,31 +110,3 @@ const PolicyResponse$json = const {
   ],
 };
 
-const WatchtowerClientServiceBase$json = const {
-  '1': 'WatchtowerClient',
-  '2': const [
-    const {'1': 'AddTower', '2': '.wtclientrpc.AddTowerRequest', '3': '.wtclientrpc.AddTowerResponse'},
-    const {'1': 'RemoveTower', '2': '.wtclientrpc.RemoveTowerRequest', '3': '.wtclientrpc.RemoveTowerResponse'},
-    const {'1': 'ListTowers', '2': '.wtclientrpc.ListTowersRequest', '3': '.wtclientrpc.ListTowersResponse'},
-    const {'1': 'GetTowerInfo', '2': '.wtclientrpc.GetTowerInfoRequest', '3': '.wtclientrpc.Tower'},
-    const {'1': 'Stats', '2': '.wtclientrpc.StatsRequest', '3': '.wtclientrpc.StatsResponse'},
-    const {'1': 'Policy', '2': '.wtclientrpc.PolicyRequest', '3': '.wtclientrpc.PolicyResponse'},
-  ],
-};
-
-const WatchtowerClientServiceBase$messageJson = const {
-  '.wtclientrpc.AddTowerRequest': AddTowerRequest$json,
-  '.wtclientrpc.AddTowerResponse': AddTowerResponse$json,
-  '.wtclientrpc.RemoveTowerRequest': RemoveTowerRequest$json,
-  '.wtclientrpc.RemoveTowerResponse': RemoveTowerResponse$json,
-  '.wtclientrpc.ListTowersRequest': ListTowersRequest$json,
-  '.wtclientrpc.ListTowersResponse': ListTowersResponse$json,
-  '.wtclientrpc.Tower': Tower$json,
-  '.wtclientrpc.TowerSession': TowerSession$json,
-  '.wtclientrpc.GetTowerInfoRequest': GetTowerInfoRequest$json,
-  '.wtclientrpc.StatsRequest': StatsRequest$json,
-  '.wtclientrpc.StatsResponse': StatsResponse$json,
-  '.wtclientrpc.PolicyRequest': PolicyRequest$json,
-  '.wtclientrpc.PolicyResponse': PolicyResponse$json,
-};
-

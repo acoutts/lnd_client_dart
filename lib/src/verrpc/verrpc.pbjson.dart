@@ -24,15 +24,3 @@ const Version$json = const {
   ],
 };
 
-const VersionerServiceBase$json = const {
-  '1': 'Versioner',
-  '2': const [
-    const {'1': 'GetVersion', '2': '.verrpc.VersionRequest', '3': '.verrpc.Version'},
-  ],
-};
-
-const VersionerServiceBase$messageJson = const {
-  '.verrpc.VersionRequest': VersionRequest$json,
-  '.verrpc.Version': Version$json,
-};
-

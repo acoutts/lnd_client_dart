@@ -5,7 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
@@ -708,31 +707,5 @@ class SharedKeyResponse extends $pb.GeneratedMessage {
   $core.bool hasSharedKey() => $_has(0);
   @$pb.TagNumber(1)
   void clearSharedKey() => clearField(1);
-}
-
-class SignerApi {
-  $pb.RpcClient _client;
-  SignerApi(this._client);
-
-  $async.Future<SignResp> signOutputRaw($pb.ClientContext ctx, SignReq request) {
-    var emptyResponse = SignResp();
-    return _client.invoke<SignResp>(ctx, 'Signer', 'SignOutputRaw', request, emptyResponse);
-  }
-  $async.Future<InputScriptResp> computeInputScript($pb.ClientContext ctx, SignReq request) {
-    var emptyResponse = InputScriptResp();
-    return _client.invoke<InputScriptResp>(ctx, 'Signer', 'ComputeInputScript', request, emptyResponse);
-  }
-  $async.Future<SignMessageResp> signMessage($pb.ClientContext ctx, SignMessageReq request) {
-    var emptyResponse = SignMessageResp();
-    return _client.invoke<SignMessageResp>(ctx, 'Signer', 'SignMessage', request, emptyResponse);
-  }
-  $async.Future<VerifyMessageResp> verifyMessage($pb.ClientContext ctx, VerifyMessageReq request) {
-    var emptyResponse = VerifyMessageResp();
-    return _client.invoke<VerifyMessageResp>(ctx, 'Signer', 'VerifyMessage', request, emptyResponse);
-  }
-  $async.Future<SharedKeyResponse> deriveSharedKey($pb.ClientContext ctx, SharedKeyRequest request) {
-    var emptyResponse = SharedKeyResponse();
-    return _client.invoke<SharedKeyResponse>(ctx, 'Signer', 'DeriveSharedKey', request, emptyResponse);
-  }
 }
 

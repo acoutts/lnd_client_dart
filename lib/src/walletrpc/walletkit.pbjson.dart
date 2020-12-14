@@ -5,9 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-import '../rpc.pbjson.dart' as $0;
-import '../signrpc/signer.pbjson.dart' as $1;
-
 const WitnessType$json = const {
   '1': 'WitnessType',
   '2': const [
@@ -278,68 +275,5 @@ const FinalizePsbtResponse$json = const {
     const {'1': 'signed_psbt', '3': 1, '4': 1, '5': 12, '10': 'signedPsbt'},
     const {'1': 'raw_final_tx', '3': 2, '4': 1, '5': 12, '10': 'rawFinalTx'},
   ],
-};
-
-const WalletKitServiceBase$json = const {
-  '1': 'WalletKit',
-  '2': const [
-    const {'1': 'ListUnspent', '2': '.walletrpc.ListUnspentRequest', '3': '.walletrpc.ListUnspentResponse'},
-    const {'1': 'LeaseOutput', '2': '.walletrpc.LeaseOutputRequest', '3': '.walletrpc.LeaseOutputResponse'},
-    const {'1': 'ReleaseOutput', '2': '.walletrpc.ReleaseOutputRequest', '3': '.walletrpc.ReleaseOutputResponse'},
-    const {'1': 'DeriveNextKey', '2': '.walletrpc.KeyReq', '3': '.signrpc.KeyDescriptor'},
-    const {'1': 'DeriveKey', '2': '.signrpc.KeyLocator', '3': '.signrpc.KeyDescriptor'},
-    const {'1': 'NextAddr', '2': '.walletrpc.AddrRequest', '3': '.walletrpc.AddrResponse'},
-    const {'1': 'PublishTransaction', '2': '.walletrpc.Transaction', '3': '.walletrpc.PublishResponse'},
-    const {'1': 'SendOutputs', '2': '.walletrpc.SendOutputsRequest', '3': '.walletrpc.SendOutputsResponse'},
-    const {'1': 'EstimateFee', '2': '.walletrpc.EstimateFeeRequest', '3': '.walletrpc.EstimateFeeResponse'},
-    const {'1': 'PendingSweeps', '2': '.walletrpc.PendingSweepsRequest', '3': '.walletrpc.PendingSweepsResponse'},
-    const {'1': 'BumpFee', '2': '.walletrpc.BumpFeeRequest', '3': '.walletrpc.BumpFeeResponse'},
-    const {'1': 'ListSweeps', '2': '.walletrpc.ListSweepsRequest', '3': '.walletrpc.ListSweepsResponse'},
-    const {'1': 'LabelTransaction', '2': '.walletrpc.LabelTransactionRequest', '3': '.walletrpc.LabelTransactionResponse'},
-    const {'1': 'FundPsbt', '2': '.walletrpc.FundPsbtRequest', '3': '.walletrpc.FundPsbtResponse'},
-    const {'1': 'FinalizePsbt', '2': '.walletrpc.FinalizePsbtRequest', '3': '.walletrpc.FinalizePsbtResponse'},
-  ],
-};
-
-const WalletKitServiceBase$messageJson = const {
-  '.walletrpc.ListUnspentRequest': ListUnspentRequest$json,
-  '.walletrpc.ListUnspentResponse': ListUnspentResponse$json,
-  '.lnrpc.Utxo': $0.Utxo$json,
-  '.lnrpc.OutPoint': $0.OutPoint$json,
-  '.walletrpc.LeaseOutputRequest': LeaseOutputRequest$json,
-  '.walletrpc.LeaseOutputResponse': LeaseOutputResponse$json,
-  '.walletrpc.ReleaseOutputRequest': ReleaseOutputRequest$json,
-  '.walletrpc.ReleaseOutputResponse': ReleaseOutputResponse$json,
-  '.walletrpc.KeyReq': KeyReq$json,
-  '.signrpc.KeyDescriptor': $1.KeyDescriptor$json,
-  '.signrpc.KeyLocator': $1.KeyLocator$json,
-  '.walletrpc.AddrRequest': AddrRequest$json,
-  '.walletrpc.AddrResponse': AddrResponse$json,
-  '.walletrpc.Transaction': Transaction$json,
-  '.walletrpc.PublishResponse': PublishResponse$json,
-  '.walletrpc.SendOutputsRequest': SendOutputsRequest$json,
-  '.signrpc.TxOut': $1.TxOut$json,
-  '.walletrpc.SendOutputsResponse': SendOutputsResponse$json,
-  '.walletrpc.EstimateFeeRequest': EstimateFeeRequest$json,
-  '.walletrpc.EstimateFeeResponse': EstimateFeeResponse$json,
-  '.walletrpc.PendingSweepsRequest': PendingSweepsRequest$json,
-  '.walletrpc.PendingSweepsResponse': PendingSweepsResponse$json,
-  '.walletrpc.PendingSweep': PendingSweep$json,
-  '.walletrpc.BumpFeeRequest': BumpFeeRequest$json,
-  '.walletrpc.BumpFeeResponse': BumpFeeResponse$json,
-  '.walletrpc.ListSweepsRequest': ListSweepsRequest$json,
-  '.walletrpc.ListSweepsResponse': ListSweepsResponse$json,
-  '.lnrpc.TransactionDetails': $0.TransactionDetails$json,
-  '.lnrpc.Transaction': $0.Transaction$json,
-  '.walletrpc.ListSweepsResponse.TransactionIDs': ListSweepsResponse_TransactionIDs$json,
-  '.walletrpc.LabelTransactionRequest': LabelTransactionRequest$json,
-  '.walletrpc.LabelTransactionResponse': LabelTransactionResponse$json,
-  '.walletrpc.FundPsbtRequest': FundPsbtRequest$json,
-  '.walletrpc.TxTemplate': TxTemplate$json,
-  '.walletrpc.TxTemplate.OutputsEntry': TxTemplate_OutputsEntry$json,
-  '.walletrpc.FundPsbtResponse': FundPsbtResponse$json,
-  '.walletrpc.UtxoLease': UtxoLease$json,
-  '.walletrpc.FinalizePsbtRequest': FinalizePsbtRequest$json,
-  '.walletrpc.FinalizePsbtResponse': FinalizePsbtResponse$json,
 };
 

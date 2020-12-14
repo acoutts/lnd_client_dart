@@ -5,8 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-import '../rpc.pbjson.dart' as $0;
-
 const CancelInvoiceMsg$json = const {
   '1': 'CancelInvoiceMsg',
   '2': const [
@@ -60,32 +58,5 @@ const SubscribeSingleInvoiceRequest$json = const {
   '9': const [
     const {'1': 1, '2': 2},
   ],
-};
-
-const InvoicesServiceBase$json = const {
-  '1': 'Invoices',
-  '2': const [
-    const {'1': 'SubscribeSingleInvoice', '2': '.invoicesrpc.SubscribeSingleInvoiceRequest', '3': '.lnrpc.Invoice', '6': true},
-    const {'1': 'CancelInvoice', '2': '.invoicesrpc.CancelInvoiceMsg', '3': '.invoicesrpc.CancelInvoiceResp'},
-    const {'1': 'AddHoldInvoice', '2': '.invoicesrpc.AddHoldInvoiceRequest', '3': '.invoicesrpc.AddHoldInvoiceResp'},
-    const {'1': 'SettleInvoice', '2': '.invoicesrpc.SettleInvoiceMsg', '3': '.invoicesrpc.SettleInvoiceResp'},
-  ],
-};
-
-const InvoicesServiceBase$messageJson = const {
-  '.invoicesrpc.SubscribeSingleInvoiceRequest': SubscribeSingleInvoiceRequest$json,
-  '.lnrpc.Invoice': $0.Invoice$json,
-  '.lnrpc.RouteHint': $0.RouteHint$json,
-  '.lnrpc.HopHint': $0.HopHint$json,
-  '.lnrpc.InvoiceHTLC': $0.InvoiceHTLC$json,
-  '.lnrpc.InvoiceHTLC.CustomRecordsEntry': $0.InvoiceHTLC_CustomRecordsEntry$json,
-  '.lnrpc.Invoice.FeaturesEntry': $0.Invoice_FeaturesEntry$json,
-  '.lnrpc.Feature': $0.Feature$json,
-  '.invoicesrpc.CancelInvoiceMsg': CancelInvoiceMsg$json,
-  '.invoicesrpc.CancelInvoiceResp': CancelInvoiceResp$json,
-  '.invoicesrpc.AddHoldInvoiceRequest': AddHoldInvoiceRequest$json,
-  '.invoicesrpc.AddHoldInvoiceResp': AddHoldInvoiceResp$json,
-  '.invoicesrpc.SettleInvoiceMsg': SettleInvoiceMsg$json,
-  '.invoicesrpc.SettleInvoiceResp': SettleInvoiceResp$json,
 };
 

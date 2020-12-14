@@ -83,27 +83,3 @@ const SetScoresResponse$json = const {
   '1': 'SetScoresResponse',
 };
 
-const AutopilotServiceBase$json = const {
-  '1': 'Autopilot',
-  '2': const [
-    const {'1': 'Status', '2': '.autopilotrpc.StatusRequest', '3': '.autopilotrpc.StatusResponse'},
-    const {'1': 'ModifyStatus', '2': '.autopilotrpc.ModifyStatusRequest', '3': '.autopilotrpc.ModifyStatusResponse'},
-    const {'1': 'QueryScores', '2': '.autopilotrpc.QueryScoresRequest', '3': '.autopilotrpc.QueryScoresResponse'},
-    const {'1': 'SetScores', '2': '.autopilotrpc.SetScoresRequest', '3': '.autopilotrpc.SetScoresResponse'},
-  ],
-};
-
-const AutopilotServiceBase$messageJson = const {
-  '.autopilotrpc.StatusRequest': StatusRequest$json,
-  '.autopilotrpc.StatusResponse': StatusResponse$json,
-  '.autopilotrpc.ModifyStatusRequest': ModifyStatusRequest$json,
-  '.autopilotrpc.ModifyStatusResponse': ModifyStatusResponse$json,
-  '.autopilotrpc.QueryScoresRequest': QueryScoresRequest$json,
-  '.autopilotrpc.QueryScoresResponse': QueryScoresResponse$json,
-  '.autopilotrpc.QueryScoresResponse.HeuristicResult': QueryScoresResponse_HeuristicResult$json,
-  '.autopilotrpc.QueryScoresResponse.HeuristicResult.ScoresEntry': QueryScoresResponse_HeuristicResult_ScoresEntry$json,
-  '.autopilotrpc.SetScoresRequest': SetScoresRequest$json,
-  '.autopilotrpc.SetScoresRequest.ScoresEntry': SetScoresRequest_ScoresEntry$json,
-  '.autopilotrpc.SetScoresResponse': SetScoresResponse$json,
-};
-

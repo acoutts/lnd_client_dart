@@ -5,7 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -621,35 +620,5 @@ class PolicyResponse extends $pb.GeneratedMessage {
   $core.bool hasSweepSatPerByte() => $_has(1);
   @$pb.TagNumber(2)
   void clearSweepSatPerByte() => clearField(2);
-}
-
-class WatchtowerClientApi {
-  $pb.RpcClient _client;
-  WatchtowerClientApi(this._client);
-
-  $async.Future<AddTowerResponse> addTower($pb.ClientContext ctx, AddTowerRequest request) {
-    var emptyResponse = AddTowerResponse();
-    return _client.invoke<AddTowerResponse>(ctx, 'WatchtowerClient', 'AddTower', request, emptyResponse);
-  }
-  $async.Future<RemoveTowerResponse> removeTower($pb.ClientContext ctx, RemoveTowerRequest request) {
-    var emptyResponse = RemoveTowerResponse();
-    return _client.invoke<RemoveTowerResponse>(ctx, 'WatchtowerClient', 'RemoveTower', request, emptyResponse);
-  }
-  $async.Future<ListTowersResponse> listTowers($pb.ClientContext ctx, ListTowersRequest request) {
-    var emptyResponse = ListTowersResponse();
-    return _client.invoke<ListTowersResponse>(ctx, 'WatchtowerClient', 'ListTowers', request, emptyResponse);
-  }
-  $async.Future<Tower> getTowerInfo($pb.ClientContext ctx, GetTowerInfoRequest request) {
-    var emptyResponse = Tower();
-    return _client.invoke<Tower>(ctx, 'WatchtowerClient', 'GetTowerInfo', request, emptyResponse);
-  }
-  $async.Future<StatsResponse> stats($pb.ClientContext ctx, StatsRequest request) {
-    var emptyResponse = StatsResponse();
-    return _client.invoke<StatsResponse>(ctx, 'WatchtowerClient', 'Stats', request, emptyResponse);
-  }
-  $async.Future<PolicyResponse> policy($pb.ClientContext ctx, PolicyRequest request) {
-    var emptyResponse = PolicyResponse();
-    return _client.invoke<PolicyResponse>(ctx, 'WatchtowerClient', 'Policy', request, emptyResponse);
-  }
 }
 

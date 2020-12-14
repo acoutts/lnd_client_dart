@@ -127,31 +127,3 @@ const SharedKeyResponse$json = const {
   ],
 };
 
-const SignerServiceBase$json = const {
-  '1': 'Signer',
-  '2': const [
-    const {'1': 'SignOutputRaw', '2': '.signrpc.SignReq', '3': '.signrpc.SignResp'},
-    const {'1': 'ComputeInputScript', '2': '.signrpc.SignReq', '3': '.signrpc.InputScriptResp'},
-    const {'1': 'SignMessage', '2': '.signrpc.SignMessageReq', '3': '.signrpc.SignMessageResp'},
-    const {'1': 'VerifyMessage', '2': '.signrpc.VerifyMessageReq', '3': '.signrpc.VerifyMessageResp'},
-    const {'1': 'DeriveSharedKey', '2': '.signrpc.SharedKeyRequest', '3': '.signrpc.SharedKeyResponse'},
-  ],
-};
-
-const SignerServiceBase$messageJson = const {
-  '.signrpc.SignReq': SignReq$json,
-  '.signrpc.SignDescriptor': SignDescriptor$json,
-  '.signrpc.KeyDescriptor': KeyDescriptor$json,
-  '.signrpc.KeyLocator': KeyLocator$json,
-  '.signrpc.TxOut': TxOut$json,
-  '.signrpc.SignResp': SignResp$json,
-  '.signrpc.InputScriptResp': InputScriptResp$json,
-  '.signrpc.InputScript': InputScript$json,
-  '.signrpc.SignMessageReq': SignMessageReq$json,
-  '.signrpc.SignMessageResp': SignMessageResp$json,
-  '.signrpc.VerifyMessageReq': VerifyMessageReq$json,
-  '.signrpc.VerifyMessageResp': VerifyMessageResp$json,
-  '.signrpc.SharedKeyRequest': SharedKeyRequest$json,
-  '.signrpc.SharedKeyResponse': SharedKeyResponse$json,
-};
-

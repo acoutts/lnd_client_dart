@@ -5,7 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
@@ -348,27 +347,5 @@ class SubscribeSingleInvoiceRequest extends $pb.GeneratedMessage {
   $core.bool hasRHash() => $_has(0);
   @$pb.TagNumber(2)
   void clearRHash() => clearField(2);
-}
-
-class InvoicesApi {
-  $pb.RpcClient _client;
-  InvoicesApi(this._client);
-
-  $async.Future<$0.Invoice> subscribeSingleInvoice($pb.ClientContext ctx, SubscribeSingleInvoiceRequest request) {
-    var emptyResponse = $0.Invoice();
-    return _client.invoke<$0.Invoice>(ctx, 'Invoices', 'SubscribeSingleInvoice', request, emptyResponse);
-  }
-  $async.Future<CancelInvoiceResp> cancelInvoice($pb.ClientContext ctx, CancelInvoiceMsg request) {
-    var emptyResponse = CancelInvoiceResp();
-    return _client.invoke<CancelInvoiceResp>(ctx, 'Invoices', 'CancelInvoice', request, emptyResponse);
-  }
-  $async.Future<AddHoldInvoiceResp> addHoldInvoice($pb.ClientContext ctx, AddHoldInvoiceRequest request) {
-    var emptyResponse = AddHoldInvoiceResp();
-    return _client.invoke<AddHoldInvoiceResp>(ctx, 'Invoices', 'AddHoldInvoice', request, emptyResponse);
-  }
-  $async.Future<SettleInvoiceResp> settleInvoice($pb.ClientContext ctx, SettleInvoiceMsg request) {
-    var emptyResponse = SettleInvoiceResp();
-    return _client.invoke<SettleInvoiceResp>(ctx, 'Invoices', 'SettleInvoice', request, emptyResponse);
-  }
 }
 

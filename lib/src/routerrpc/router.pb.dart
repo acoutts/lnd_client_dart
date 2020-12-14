@@ -5,7 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
@@ -1660,63 +1659,5 @@ class ForwardHtlcInterceptResponse extends $pb.GeneratedMessage {
   $core.bool hasPreimage() => $_has(2);
   @$pb.TagNumber(3)
   void clearPreimage() => clearField(3);
-}
-
-class RouterApi {
-  $pb.RpcClient _client;
-  RouterApi(this._client);
-
-  $async.Future<$0.Payment> sendPaymentV2($pb.ClientContext ctx, SendPaymentRequest request) {
-    var emptyResponse = $0.Payment();
-    return _client.invoke<$0.Payment>(ctx, 'Router', 'SendPaymentV2', request, emptyResponse);
-  }
-  $async.Future<$0.Payment> trackPaymentV2($pb.ClientContext ctx, TrackPaymentRequest request) {
-    var emptyResponse = $0.Payment();
-    return _client.invoke<$0.Payment>(ctx, 'Router', 'TrackPaymentV2', request, emptyResponse);
-  }
-  $async.Future<RouteFeeResponse> estimateRouteFee($pb.ClientContext ctx, RouteFeeRequest request) {
-    var emptyResponse = RouteFeeResponse();
-    return _client.invoke<RouteFeeResponse>(ctx, 'Router', 'EstimateRouteFee', request, emptyResponse);
-  }
-  $async.Future<SendToRouteResponse> sendToRoute($pb.ClientContext ctx, SendToRouteRequest request) {
-    var emptyResponse = SendToRouteResponse();
-    return _client.invoke<SendToRouteResponse>(ctx, 'Router', 'SendToRoute', request, emptyResponse);
-  }
-  $async.Future<$0.HTLCAttempt> sendToRouteV2($pb.ClientContext ctx, SendToRouteRequest request) {
-    var emptyResponse = $0.HTLCAttempt();
-    return _client.invoke<$0.HTLCAttempt>(ctx, 'Router', 'SendToRouteV2', request, emptyResponse);
-  }
-  $async.Future<ResetMissionControlResponse> resetMissionControl($pb.ClientContext ctx, ResetMissionControlRequest request) {
-    var emptyResponse = ResetMissionControlResponse();
-    return _client.invoke<ResetMissionControlResponse>(ctx, 'Router', 'ResetMissionControl', request, emptyResponse);
-  }
-  $async.Future<QueryMissionControlResponse> queryMissionControl($pb.ClientContext ctx, QueryMissionControlRequest request) {
-    var emptyResponse = QueryMissionControlResponse();
-    return _client.invoke<QueryMissionControlResponse>(ctx, 'Router', 'QueryMissionControl', request, emptyResponse);
-  }
-  $async.Future<QueryProbabilityResponse> queryProbability($pb.ClientContext ctx, QueryProbabilityRequest request) {
-    var emptyResponse = QueryProbabilityResponse();
-    return _client.invoke<QueryProbabilityResponse>(ctx, 'Router', 'QueryProbability', request, emptyResponse);
-  }
-  $async.Future<BuildRouteResponse> buildRoute($pb.ClientContext ctx, BuildRouteRequest request) {
-    var emptyResponse = BuildRouteResponse();
-    return _client.invoke<BuildRouteResponse>(ctx, 'Router', 'BuildRoute', request, emptyResponse);
-  }
-  $async.Future<HtlcEvent> subscribeHtlcEvents($pb.ClientContext ctx, SubscribeHtlcEventsRequest request) {
-    var emptyResponse = HtlcEvent();
-    return _client.invoke<HtlcEvent>(ctx, 'Router', 'SubscribeHtlcEvents', request, emptyResponse);
-  }
-  $async.Future<PaymentStatus> sendPayment($pb.ClientContext ctx, SendPaymentRequest request) {
-    var emptyResponse = PaymentStatus();
-    return _client.invoke<PaymentStatus>(ctx, 'Router', 'SendPayment', request, emptyResponse);
-  }
-  $async.Future<PaymentStatus> trackPayment($pb.ClientContext ctx, TrackPaymentRequest request) {
-    var emptyResponse = PaymentStatus();
-    return _client.invoke<PaymentStatus>(ctx, 'Router', 'TrackPayment', request, emptyResponse);
-  }
-  $async.Future<ForwardHtlcInterceptRequest> htlcInterceptor($pb.ClientContext ctx, ForwardHtlcInterceptResponse request) {
-    var emptyResponse = ForwardHtlcInterceptRequest();
-    return _client.invoke<ForwardHtlcInterceptRequest>(ctx, 'Router', 'HtlcInterceptor', request, emptyResponse);
-  }
 }
 

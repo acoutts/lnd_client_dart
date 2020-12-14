@@ -5,7 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -335,27 +334,5 @@ class SetScoresResponse extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static SetScoresResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetScoresResponse>(create);
   static SetScoresResponse _defaultInstance;
-}
-
-class AutopilotApi {
-  $pb.RpcClient _client;
-  AutopilotApi(this._client);
-
-  $async.Future<StatusResponse> status($pb.ClientContext ctx, StatusRequest request) {
-    var emptyResponse = StatusResponse();
-    return _client.invoke<StatusResponse>(ctx, 'Autopilot', 'Status', request, emptyResponse);
-  }
-  $async.Future<ModifyStatusResponse> modifyStatus($pb.ClientContext ctx, ModifyStatusRequest request) {
-    var emptyResponse = ModifyStatusResponse();
-    return _client.invoke<ModifyStatusResponse>(ctx, 'Autopilot', 'ModifyStatus', request, emptyResponse);
-  }
-  $async.Future<QueryScoresResponse> queryScores($pb.ClientContext ctx, QueryScoresRequest request) {
-    var emptyResponse = QueryScoresResponse();
-    return _client.invoke<QueryScoresResponse>(ctx, 'Autopilot', 'QueryScores', request, emptyResponse);
-  }
-  $async.Future<SetScoresResponse> setScores($pb.ClientContext ctx, SetScoresRequest request) {
-    var emptyResponse = SetScoresResponse();
-    return _client.invoke<SetScoresResponse>(ctx, 'Autopilot', 'SetScores', request, emptyResponse);
-  }
 }
 

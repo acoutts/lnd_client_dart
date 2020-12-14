@@ -5,7 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -434,27 +433,5 @@ class ChangePasswordResponse extends $pb.GeneratedMessage {
   $core.bool hasAdminMacaroon() => $_has(0);
   @$pb.TagNumber(1)
   void clearAdminMacaroon() => clearField(1);
-}
-
-class WalletUnlockerApi {
-  $pb.RpcClient _client;
-  WalletUnlockerApi(this._client);
-
-  $async.Future<GenSeedResponse> genSeed($pb.ClientContext ctx, GenSeedRequest request) {
-    var emptyResponse = GenSeedResponse();
-    return _client.invoke<GenSeedResponse>(ctx, 'WalletUnlocker', 'GenSeed', request, emptyResponse);
-  }
-  $async.Future<InitWalletResponse> initWallet($pb.ClientContext ctx, InitWalletRequest request) {
-    var emptyResponse = InitWalletResponse();
-    return _client.invoke<InitWalletResponse>(ctx, 'WalletUnlocker', 'InitWallet', request, emptyResponse);
-  }
-  $async.Future<UnlockWalletResponse> unlockWallet($pb.ClientContext ctx, UnlockWalletRequest request) {
-    var emptyResponse = UnlockWalletResponse();
-    return _client.invoke<UnlockWalletResponse>(ctx, 'WalletUnlocker', 'UnlockWallet', request, emptyResponse);
-  }
-  $async.Future<ChangePasswordResponse> changePassword($pb.ClientContext ctx, ChangePasswordRequest request) {
-    var emptyResponse = ChangePasswordResponse();
-    return _client.invoke<ChangePasswordResponse>(ctx, 'WalletUnlocker', 'ChangePassword', request, emptyResponse);
-  }
 }
 

@@ -5,8 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-import '../rpc.pbjson.dart' as $0;
-
 const FailureDetail$json = const {
   '1': 'FailureDetail',
   '2': const [
@@ -355,83 +353,5 @@ const ForwardHtlcInterceptResponse$json = const {
     const {'1': 'action', '3': 2, '4': 1, '5': 14, '6': '.routerrpc.ResolveHoldForwardAction', '10': 'action'},
     const {'1': 'preimage', '3': 3, '4': 1, '5': 12, '10': 'preimage'},
   ],
-};
-
-const RouterServiceBase$json = const {
-  '1': 'Router',
-  '2': const [
-    const {'1': 'SendPaymentV2', '2': '.routerrpc.SendPaymentRequest', '3': '.lnrpc.Payment', '6': true},
-    const {'1': 'TrackPaymentV2', '2': '.routerrpc.TrackPaymentRequest', '3': '.lnrpc.Payment', '6': true},
-    const {'1': 'EstimateRouteFee', '2': '.routerrpc.RouteFeeRequest', '3': '.routerrpc.RouteFeeResponse'},
-    const {
-      '1': 'SendToRoute',
-      '2': '.routerrpc.SendToRouteRequest',
-      '3': '.routerrpc.SendToRouteResponse',
-      '4': const {'33': true},
-    },
-    const {'1': 'SendToRouteV2', '2': '.routerrpc.SendToRouteRequest', '3': '.lnrpc.HTLCAttempt'},
-    const {'1': 'ResetMissionControl', '2': '.routerrpc.ResetMissionControlRequest', '3': '.routerrpc.ResetMissionControlResponse'},
-    const {'1': 'QueryMissionControl', '2': '.routerrpc.QueryMissionControlRequest', '3': '.routerrpc.QueryMissionControlResponse'},
-    const {'1': 'QueryProbability', '2': '.routerrpc.QueryProbabilityRequest', '3': '.routerrpc.QueryProbabilityResponse'},
-    const {'1': 'BuildRoute', '2': '.routerrpc.BuildRouteRequest', '3': '.routerrpc.BuildRouteResponse'},
-    const {'1': 'SubscribeHtlcEvents', '2': '.routerrpc.SubscribeHtlcEventsRequest', '3': '.routerrpc.HtlcEvent', '6': true},
-    const {
-      '1': 'SendPayment',
-      '2': '.routerrpc.SendPaymentRequest',
-      '3': '.routerrpc.PaymentStatus',
-      '4': const {'33': true},
-      '6': true,
-    },
-    const {
-      '1': 'TrackPayment',
-      '2': '.routerrpc.TrackPaymentRequest',
-      '3': '.routerrpc.PaymentStatus',
-      '4': const {'33': true},
-      '6': true,
-    },
-    const {'1': 'HtlcInterceptor', '2': '.routerrpc.ForwardHtlcInterceptResponse', '3': '.routerrpc.ForwardHtlcInterceptRequest', '5': true, '6': true},
-  ],
-};
-
-const RouterServiceBase$messageJson = const {
-  '.routerrpc.SendPaymentRequest': SendPaymentRequest$json,
-  '.lnrpc.RouteHint': $0.RouteHint$json,
-  '.lnrpc.HopHint': $0.HopHint$json,
-  '.routerrpc.SendPaymentRequest.DestCustomRecordsEntry': SendPaymentRequest_DestCustomRecordsEntry$json,
-  '.lnrpc.Payment': $0.Payment$json,
-  '.lnrpc.HTLCAttempt': $0.HTLCAttempt$json,
-  '.lnrpc.Route': $0.Route$json,
-  '.lnrpc.Hop': $0.Hop$json,
-  '.lnrpc.MPPRecord': $0.MPPRecord$json,
-  '.lnrpc.Hop.CustomRecordsEntry': $0.Hop_CustomRecordsEntry$json,
-  '.lnrpc.Failure': $0.Failure$json,
-  '.lnrpc.ChannelUpdate': $0.ChannelUpdate$json,
-  '.routerrpc.TrackPaymentRequest': TrackPaymentRequest$json,
-  '.routerrpc.RouteFeeRequest': RouteFeeRequest$json,
-  '.routerrpc.RouteFeeResponse': RouteFeeResponse$json,
-  '.routerrpc.SendToRouteRequest': SendToRouteRequest$json,
-  '.routerrpc.SendToRouteResponse': SendToRouteResponse$json,
-  '.routerrpc.ResetMissionControlRequest': ResetMissionControlRequest$json,
-  '.routerrpc.ResetMissionControlResponse': ResetMissionControlResponse$json,
-  '.routerrpc.QueryMissionControlRequest': QueryMissionControlRequest$json,
-  '.routerrpc.QueryMissionControlResponse': QueryMissionControlResponse$json,
-  '.routerrpc.PairHistory': PairHistory$json,
-  '.routerrpc.PairData': PairData$json,
-  '.routerrpc.QueryProbabilityRequest': QueryProbabilityRequest$json,
-  '.routerrpc.QueryProbabilityResponse': QueryProbabilityResponse$json,
-  '.routerrpc.BuildRouteRequest': BuildRouteRequest$json,
-  '.routerrpc.BuildRouteResponse': BuildRouteResponse$json,
-  '.routerrpc.SubscribeHtlcEventsRequest': SubscribeHtlcEventsRequest$json,
-  '.routerrpc.HtlcEvent': HtlcEvent$json,
-  '.routerrpc.ForwardEvent': ForwardEvent$json,
-  '.routerrpc.HtlcInfo': HtlcInfo$json,
-  '.routerrpc.ForwardFailEvent': ForwardFailEvent$json,
-  '.routerrpc.SettleEvent': SettleEvent$json,
-  '.routerrpc.LinkFailEvent': LinkFailEvent$json,
-  '.routerrpc.PaymentStatus': PaymentStatus$json,
-  '.routerrpc.ForwardHtlcInterceptResponse': ForwardHtlcInterceptResponse$json,
-  '.routerrpc.CircuitKey': CircuitKey$json,
-  '.routerrpc.ForwardHtlcInterceptRequest': ForwardHtlcInterceptRequest$json,
-  '.routerrpc.ForwardHtlcInterceptRequest.CustomRecordsEntry': ForwardHtlcInterceptRequest_CustomRecordsEntry$json,
 };
 

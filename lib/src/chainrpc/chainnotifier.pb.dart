@@ -5,7 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -551,23 +550,5 @@ class BlockEpoch extends $pb.GeneratedMessage {
   $core.bool hasHeight() => $_has(1);
   @$pb.TagNumber(2)
   void clearHeight() => clearField(2);
-}
-
-class ChainNotifierApi {
-  $pb.RpcClient _client;
-  ChainNotifierApi(this._client);
-
-  $async.Future<ConfEvent> registerConfirmationsNtfn($pb.ClientContext ctx, ConfRequest request) {
-    var emptyResponse = ConfEvent();
-    return _client.invoke<ConfEvent>(ctx, 'ChainNotifier', 'RegisterConfirmationsNtfn', request, emptyResponse);
-  }
-  $async.Future<SpendEvent> registerSpendNtfn($pb.ClientContext ctx, SpendRequest request) {
-    var emptyResponse = SpendEvent();
-    return _client.invoke<SpendEvent>(ctx, 'ChainNotifier', 'RegisterSpendNtfn', request, emptyResponse);
-  }
-  $async.Future<BlockEpoch> registerBlockEpochNtfn($pb.ClientContext ctx, BlockEpoch request) {
-    var emptyResponse = BlockEpoch();
-    return _client.invoke<BlockEpoch>(ctx, 'ChainNotifier', 'RegisterBlockEpochNtfn', request, emptyResponse);
-  }
 }
 

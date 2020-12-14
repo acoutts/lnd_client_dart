@@ -5,7 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -84,15 +83,5 @@ class GetInfoResponse extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(3)
   $core.List<$core.String> get uris => $_getList(2);
-}
-
-class WatchtowerApi {
-  $pb.RpcClient _client;
-  WatchtowerApi(this._client);
-
-  $async.Future<GetInfoResponse> getInfo($pb.ClientContext ctx, GetInfoRequest request) {
-    var emptyResponse = GetInfoResponse();
-    return _client.invoke<GetInfoResponse>(ctx, 'Watchtower', 'GetInfo', request, emptyResponse);
-  }
 }
 
