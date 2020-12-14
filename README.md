@@ -1,22 +1,42 @@
-A library for Dart developers.
+# lnd_dart
+This package contains the lnrpc protos compiled for dart to communicate with lnd from a dart program. This will also work for Flutter apps.
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+## Updating protos
+1. Get LND in your $GOPATH: `GO111MODULE=off go get github.com/lightningnetwork/lnd`
+2. Generate the protos using `./gen_proto.sh`
 
 ## Usage
-
-A simple usage example:
-
-```dart
-import 'package:lnd_dart2/lnd_dart2.dart';
-
-main() {
-  var awesome = new Awesome();
-}
+First add the following packages to your `pubspec.yaml`:
+```yaml
+  grpc: ^2.8.0
+  fixnum: ^0.10.11
 ```
 
-## Features and bugs
+Now you can create your client and start communicating with your lnd instance:
+```dart
+    /// Lightning client
+    final client = LightningClient(
+      ClientChannel(
+        'lnd-host',
+        port: 10009,
+      ),
+    );
 
-Please file feature requests and bugs at the [issue tracker][tracker].
+    /// Wallet rpc client
+    final wallet = WalletUnlockerClient(
+      ClientChannel(
+        'lnd-host',
+        port: 10009,
+      ),
+    );
 
-[tracker]: http://example.com/issues/replaceme
+    /// Unlock the wallet
+    await wallet.unlockWallet(
+      UnlockWalletRequest()..walletPassword = utf8.encode('password'),
+    );
+
+    /// Create an invoice for 10,000 SAT
+    await client.addInvoice(
+      Invoice()..amtPaidSat = Int64(10000),
+    );
+```
