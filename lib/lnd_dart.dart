@@ -11,3 +11,6 @@ export 'src/walletunlocker.pb.dart';
 export 'src/walletunlocker.pbenum.dart';
 export 'src/walletunlocker.pbgrpc.dart';
 export 'src/walletunlocker.pbjson.dart';
+
+export 'package:fixnum/fixnum.dart';
+export 'package:grpc/grpc.dart';

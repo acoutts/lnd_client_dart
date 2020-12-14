@@ -1,5 +1,5 @@
-name: lnd_dart
-description: A starting point for Dart libraries or applications.
+name: lnd_client_dart
+description: A compiled lnd client in Dart.
 # version: 1.0.0
 # homepage: https://www.example.com
 

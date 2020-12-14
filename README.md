@@ -1,18 +1,8 @@
-# lnd_dart
-This package contains the lnrpc protos compiled for dart to communicate with lnd from a dart program. This will also work for Flutter apps.
-
-## Updating protos
-1. Get LND in your $GOPATH: `GO111MODULE=off go get github.com/lightningnetwork/lnd`
-2. Generate the protos using `./gen_proto.sh`
+# lnd_client_dart
+This package contains a compiled lnd client in Dart.
 
 ## Usage
-First add the following packages to your `pubspec.yaml`:
-```yaml
-  grpc: ^2.8.0
-  fixnum: ^0.10.11
-```
-
-Now you can create your client and start communicating with your lnd instance:
+Create your clients and start communicating with your lnd instance:
 ```dart
     /// Lightning client
     final client = LightningClient(
@@ -40,3 +30,8 @@ Now you can create your client and start communicating with your lnd instance:
       Invoice()..amtPaidSat = Int64(10000),
     );
 ```
+
+## Updating protos
+Important: The `gen_proto.sh` script expects lnd in your `GOPATH` with `GO111MODULE=off`.
+1. Get LND into your $GOPATH: `GO111MODULE=off go get github.com/lightningnetwork/lnd`
+2. Generate the protos using `./gen_proto.sh`
