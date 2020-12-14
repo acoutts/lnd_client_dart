@@ -27,4 +27,4 @@ done
 # Copy new dart files in place
 cd $WORKING_DIR
 rm -rf ./lib/src/*
-cp $GOPATH/src/github.com/lightningnetwork/lnd/lnrpc/dart/* ./lib/src/
+cp -r $GOPATH/src/github.com/lightningnetwork/lnd/lnrpc/dart/* ./lib/src/
