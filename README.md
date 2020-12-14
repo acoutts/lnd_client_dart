@@ -4,31 +4,31 @@ This package contains a compiled lnd client in Dart.
 ## Usage
 Create your clients and start communicating with your lnd instance:
 ```dart
-    /// Lightning client
-    final client = LightningClient(
-      ClientChannel(
-        'lnd-host',
-        port: 10009,
-      ),
-    );
+/// Lightning client
+final client = LightningClient(
+  ClientChannel(
+    'lnd-host',
+    port: 10009,
+  ),
+);
 
-    /// Wallet rpc client
-    final wallet = WalletUnlockerClient(
-      ClientChannel(
-        'lnd-host',
-        port: 10009,
-      ),
-    );
+/// Wallet rpc client
+final wallet = WalletUnlockerClient(
+  ClientChannel(
+    'lnd-host',
+    port: 10009,
+  ),
+);
 
-    /// Unlock the wallet
-    await wallet.unlockWallet(
-      UnlockWalletRequest()..walletPassword = utf8.encode('password'),
-    );
+/// Unlock the wallet
+await wallet.unlockWallet(
+  UnlockWalletRequest()..walletPassword = utf8.encode('password'),
+);
 
-    /// Create an invoice for 10,000 SAT
-    await client.addInvoice(
-      Invoice()..amtPaidSat = Int64(10000),
-    );
+/// Create an invoice for 10,000 SAT
+await client.addInvoice(
+  Invoice()..amtPaidSat = Int64(10000),
+);
 ```
 
 ## Updating protos
